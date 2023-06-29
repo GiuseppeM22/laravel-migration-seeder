@@ -19,9 +19,6 @@
         @yield('content')
     </main>
 
-    <!-- Includo il footer del sito web tramite un partial -->
-    @include('partials.footer')
-
     <!-- Assets JS/CSS -->
     @vite('resources/js/app.js')
 </body>

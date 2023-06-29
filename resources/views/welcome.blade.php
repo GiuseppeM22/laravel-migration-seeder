@@ -2,14 +2,13 @@
 
 @section('content')
 <div class="container my-3">
-    <h1>Welcome Page</h1>
-    <div class="row g-4">
-        <div class="col">
-            <div>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, delectus ad esse illum omnis earum eligendi sint a minus quasi, inventore nulla autem. Maxime voluptatem eligendi veniam voluptates. Soluta, sunt!</p>
-            </div>
-        </div>
-    </div>
-
+    <h1>Lista treni:</h1>
+    @foreach ($trains as $train)
+        <h2>Azienda: {{$train->azienda}}</h2>
+        <p>tratta: {{$train->stazione_di_partenza}} -> {{$train->stazione_di_arrivo}}</p>
+        <p>orari: {{$train->orario_di_partenza}} -> {{$train->orario_di_arrivo}}</p>
+        <p>In Orario: {{$train->in_orario? 'Si' : 'No'}}</p>
+    @endforeach
 </div>
 @endsection
+
